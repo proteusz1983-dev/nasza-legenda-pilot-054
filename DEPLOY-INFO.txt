@@ -1,0 +1,8 @@
+NASZA LEGENDA 0.5.4 - PACZKA GITHUB
+
+Wygenerowano: 18.07.2026 20:00:26,85
+Nagrania ElevenLabs MP3: 14
+
+Wgraj ZAWARTOSC tego folderu do repozytorium.
+Nie wgrywaj folderu jako jednego dodatkowego poziomu.
+index.html musi byc widoczny w katalogu glownym repozytorium.

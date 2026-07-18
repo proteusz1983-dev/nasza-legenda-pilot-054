@@ -1,0 +1,29 @@
+{
+  "name": "Nasza Legenda 0.5.4 — Pilot",
+  "short_name": "Nasza Legenda",
+  "description": "Filmowy pilot interaktywnego serialu — Sygnał spoza czasu.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#020305",
+  "theme_color": "#05070b",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "./icons/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}
