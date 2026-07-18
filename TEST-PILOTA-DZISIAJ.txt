@@ -1,0 +1,15 @@
+NASZA LEGENDA 0.5.4 — TEST PILOTA
+
+Nie tłumacz uczestnikom fabuły przed rozpoczęciem.
+Nie podpowiadaj, jaki przedmiot znaleźć ani którą decyzję wybrać.
+
+Po przejściu zapytaj osobno każdą osobę:
+1. O czym była historia?
+2. Po co szukaliście odbiornika?
+3. Co zmieniła próba światła?
+4. Czy decyzje naprawdę zmieniały historię?
+5. Czy to był bardziej serial czy aplikacja?
+6. Czy zagrasz w odcinek 2?
+7. Ile zapłaciłbyś za 25–30 minut podobnej historii?
+
+Zachowaj pobrany JSON.
