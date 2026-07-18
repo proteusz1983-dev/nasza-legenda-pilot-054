@@ -1,0 +1,272 @@
+{
+  "start": "intro",
+  "nodes": {
+    "intro": {
+      "type": "video",
+      "src": "scenes/intro.mp4",
+      "poster": "scenes-src/intro.png",
+      "dialogue": [
+        {
+          "speaker": "narrator",
+          "direction": "low, cinematic, restrained, with a deliberate pause after the time",
+          "text": "Archiwum Kroniki. Godzina zero zero siedem. Odebrano sygnał, którego jeszcze nie wysłano."
+        },
+        {
+          "speaker": "chronicler",
+          "direction": "quietly, tense, as if revealing something impossible",
+          "text": "Ta wiadomość została wysłana jutro."
+        },
+        {
+          "speaker": "archivist",
+          "direction": "calm, precise, professional, but slightly unsettled",
+          "text": "Odbiorca potwierdzony. Wszyscy uczestnicy są obecni."
+        },
+        {
+          "speaker": "chronicler",
+          "direction": "lowering his voice, serious and intimate",
+          "text": "Nie znam was. Ale ktoś po drugiej stronie zna każde z waszych imion."
+        },
+        {
+          "speaker": "shadow",
+          "direction": "whispering from far away, cold, almost inside the listener’s head",
+          "text": "Nie słuchajcie go."
+        },
+        {
+          "speaker": "chronicler",
+          "direction": "urgent but controlled",
+          "text": "Sygnał zanika. Potrzebuję waszej pomocy."
+        }
+      ],
+      "holdAfter": 450,
+      "next": "taskBrief"
+    },
+    "taskBrief": {
+      "type": "video",
+      "src": "scenes/task-intro.mp4",
+      "poster": "scenes-src/task.png",
+      "dialogue": [
+        {
+          "speaker": "chronicler",
+          "direction": "clear and urgent, giving a mission",
+          "text": "W pomieszczeniu, w którym jesteście, znajdźcie przedmiot zdolny odebrać albo przekazać sygnał."
+        },
+        {
+          "speaker": "archivist",
+          "direction": "precise countdown operator",
+          "text": "Czas na stabilizację: trzydzieści sekund."
+        },
+        {
+          "speaker": "shadow",
+          "direction": "softly amused, threatening",
+          "text": "Możecie też niczego nie dotykać. Wtedy ja zdecyduję za was."
+        }
+      ],
+      "holdAfter": 350,
+      "next": "receiverTask"
+    },
+    "receiverTask": {
+      "type": "task",
+      "src": "scenes/task-loop.mp4",
+      "poster": "scenes-src/task.png",
+      "timeLimit": 30,
+      "title": "PRÓBA ODBIORNIKA",
+      "prompt": "Znajdźcie w pokoju przedmiot, który może odebrać albo przekazać sygnał.",
+      "completeLabel": "MAMY PRZEDMIOT",
+      "onComplete": "messageChoice",
+      "onTimeout": "timeout"
+    },
+    "timeout": {
+      "type": "video",
+      "src": "scenes/timeout.mp4",
+      "poster": "scenes-src/timeout.png",
+      "dialogue": [
+        {
+          "speaker": "archivist",
+          "direction": "alarm rising, still controlled",
+          "text": "Stabilizacja nieudana. Sygnał został przejęty."
+        },
+        {
+          "speaker": "shadow",
+          "direction": "satisfied, close whisper",
+          "text": "Czas minął. Wiadomość należy teraz do mnie."
+        },
+        {
+          "speaker": "future",
+          "direction": "weak, distorted, frightened, with effort",
+          "text": "Jedno słowo... wróćcie."
+        },
+        {
+          "speaker": "chronicler",
+          "direction": "firm, fighting panic",
+          "text": "Macie jeszcze wybór. Ale nie cały."
+        }
+      ],
+      "holdAfter": 400,
+      "next": "messageChoice"
+    },
+    "messageChoice": {
+      "type": "choice",
+      "src": "scenes/task-loop.mp4",
+      "poster": "scenes-src/task.png",
+      "timeLimit": 10,
+      "title": "CO ROBICIE Z WIADOMOŚCIĄ?",
+      "dialogue": [
+        {
+          "speaker": "chronicler",
+          "direction": "urgent, focused",
+          "text": "Znaleziony przedmiot przyjął sygnał. Teraz musicie zdecydować, co z nim zrobić."
+        },
+        {
+          "speaker": "archivist",
+          "direction": "precise and neutral",
+          "text": "Opcja pierwsza: odsłuchać. Opcja druga: zabezpieczyć."
+        },
+        {
+          "speaker": "shadow",
+          "direction": "tempting, persuasive, almost friendly",
+          "text": "Otwórzcie wiadomość. Przecież chcecie wiedzieć, kto ją wysłał."
+        }
+      ],
+      "options": [
+        {
+          "id": "listen",
+          "label": "ODSŁUCHAJ",
+          "next": "listen"
+        },
+        {
+          "id": "secure",
+          "label": "ZABEZPIECZ",
+          "next": "secure"
+        }
+      ]
+    },
+    "listen": {
+      "type": "video",
+      "src": "scenes/listen.mp4",
+      "poster": "scenes-src/listen.png",
+      "effect": {
+        "path": "listen"
+      },
+      "dialogue": [
+        {
+          "speaker": "archivist",
+          "direction": "surprised by the reading, speaking quickly",
+          "text": "Kanał otwarty. Źródło sygnału znajduje się wiele lat przed nami."
+        },
+        {
+          "speaker": "future",
+          "direction": "urgent, emotional, trying to break through interference",
+          "text": "Nie ufajcie Kronikarzowi. Ta wiadomość nie miała was ostrzec. Miała was sprowadzić."
+        },
+        {
+          "speaker": "shadow",
+          "direction": "a short, cold whisper",
+          "text": "Za późno."
+        },
+        {
+          "speaker": "chronicler",
+          "direction": "shouting for the first time, genuinely afraid",
+          "text": "Odłączcie odbiornik. Natychmiast!"
+        }
+      ],
+      "holdAfter": 500,
+      "next": "cliffhangerListen"
+    },
+    "secure": {
+      "type": "video",
+      "src": "scenes/secure.mp4",
+      "poster": "scenes-src/secure.png",
+      "effect": {
+        "path": "secure"
+      },
+      "dialogue": [
+        {
+          "speaker": "archivist",
+          "direction": "relieved but cautious",
+          "text": "Zabezpieczenie przyjęte. Kanał został zamknięty."
+        },
+        {
+          "speaker": "chronicler",
+          "direction": "quiet relief",
+          "text": "Dobrze. Portal jest bezpieczny."
+        },
+        {
+          "speaker": "shadow",
+          "direction": "dry, mocking, very close",
+          "text": "Naprawdę?"
+        },
+        {
+          "speaker": "future",
+          "direction": "desperate, speaking through a failing connection",
+          "text": "Słyszycie mnie? Nie zamknęliście portalu. Zamknęliście mnie po niewłaściwej stronie."
+        },
+        {
+          "speaker": "chronicler",
+          "direction": "stunned, barely above a whisper",
+          "text": "Skąd ten głos zna wasze imiona?"
+        }
+      ],
+      "holdAfter": 500,
+      "next": "cliffhangerSecure"
+    },
+    "cliffhangerListen": {
+      "type": "video",
+      "src": "scenes/cliffhanger.mp4",
+      "poster": "scenes-src/cliffhanger.png",
+      "dialogue": [
+        {
+          "speaker": "narrator",
+          "direction": "cinematic, grave, measured",
+          "text": "Na ekranie odbiornika pojawiła się data: jutro, godzina dwadzieścia trzy pięćdziesiąt dziewięć."
+        },
+        {
+          "speaker": "future",
+          "direction": "urgent but clearer now",
+          "text": "Macie jeden dzień, żeby nie dopuścić do pierwszego pęknięcia."
+        },
+        {
+          "speaker": "shadow",
+          "direction": "whispering with quiet certainty",
+          "text": "Ja będę tam wcześniej."
+        }
+      ],
+      "holdAfter": 650,
+      "next": "end"
+    },
+    "cliffhangerSecure": {
+      "type": "video",
+      "src": "scenes/cliffhanger.mp4",
+      "poster": "scenes-src/cliffhanger.png",
+      "dialogue": [
+        {
+          "speaker": "narrator",
+          "direction": "cinematic, ominous, slow",
+          "text": "Portal zgasł. Po sekundzie na jego powierzchni pojawiło się pierwsze pęknięcie."
+        },
+        {
+          "speaker": "future",
+          "direction": "urgent warning, breathless",
+          "text": "Nie otwierajcie go ponownie. Najpierw odnajdźcie drugą Kotwicę."
+        },
+        {
+          "speaker": "shadow",
+          "direction": "soft, triumphant whisper",
+          "text": "Ja już ją znalazłem."
+        }
+      ],
+      "holdAfter": 650,
+      "next": "end"
+    },
+    "end": {
+      "type": "end"
+    }
+  },
+  "voicePack": {
+    "provider": "ElevenLabs",
+    "model": "eleven_v3",
+    "mode": "text-to-dialogue",
+    "ready": false,
+    "language": "pl",
+    "cast": {}
+  }
+}

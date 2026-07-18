@@ -1,0 +1,12 @@
+{
+  "id": "signal-spoza-czasu",
+  "title": "Sygnał spoza czasu",
+  "series": "Nasza Legenda",
+  "version": "0.5.3",
+  "language": "pl-PL",
+  "estimatedMinutes": "3–5",
+  "startNode": "intro",
+  "graph": "story-graph.json",
+  "cover": "scenes-src/intro.png",
+  "audio": "ElevenLabs v3 Dialogue (po uruchomieniu generatora)"
+}

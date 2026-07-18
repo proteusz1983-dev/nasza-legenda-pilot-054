@@ -1,0 +1,12 @@
+{
+  "id": "signal-spoza-czasu",
+  "title": "Sygnał spoza czasu — pilot 0.5.4",
+  "series": "Nasza Legenda",
+  "version": "0.5.4-pilot-force",
+  "language": "pl-PL",
+  "estimatedMinutes": "4-6",
+  "startNode": "intro",
+  "graph": "story-graph.json",
+  "cover": "scenes-src/intro.png",
+  "audio": "ElevenLabs v3 Dialogue (po uruchomieniu generatora)"
+}

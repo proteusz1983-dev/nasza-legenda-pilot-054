@@ -1,0 +1,868 @@
+{
+  "start": "intro",
+  "nodes": {
+    "intro": {
+      "type": "video",
+      "src": "scenes/intro.mp4",
+      "poster": "scenes-src/intro.png",
+      "dialogue": [
+        {
+          "speaker": "narrator",
+          "direction": "low, cinematic, restrained, with a deliberate pause after the time",
+          "text": "Archiwum Kroniki. Godzina zero zero siedem. Odebrano sygnał, którego jeszcze nie wysłano."
+        },
+        {
+          "speaker": "chronicler",
+          "direction": "quietly, tense, as if revealing something impossible",
+          "text": "Ta wiadomość została wysłana jutro."
+        },
+        {
+          "speaker": "archivist",
+          "direction": "calm, precise, professional, but slightly unsettled",
+          "text": "Odbiorca potwierdzony. Wszyscy uczestnicy są obecni."
+        },
+        {
+          "speaker": "chronicler",
+          "direction": "lowering his voice, serious and intimate",
+          "text": "Nie znam was. Ale ktoś po drugiej stronie zna każde z waszych imion."
+        },
+        {
+          "speaker": "shadow",
+          "direction": "whispering from far away, cold, almost inside the listener’s head",
+          "text": "Nie słuchajcie go."
+        },
+        {
+          "speaker": "chronicler",
+          "direction": "urgent but controlled",
+          "text": "Sygnał zanika. Potrzebuję waszej pomocy."
+        }
+      ],
+      "holdAfter": 450,
+      "next": "taskBrief",
+      "dialogueAudio": "audio/elevenlabs/intro.mp3",
+      "captionTimeline": [
+        {
+          "speaker": "narrator",
+          "text": "Archiwum Kroniki. Godzina zero zero siedem. Odebrano sygnał, którego jeszcze nie wysłano.",
+          "start": 0.0,
+          "end": 7.145
+        },
+        {
+          "speaker": "chronicler",
+          "text": "Ta wiadomość została wysłana jutro.",
+          "start": 7.195,
+          "end": 10.405
+        },
+        {
+          "speaker": "archivist",
+          "text": "Odbiorca potwierdzony. Wszyscy uczestnicy są obecni.",
+          "start": 10.455,
+          "end": 14.228
+        },
+        {
+          "speaker": "chronicler",
+          "text": "Nie znam was. Ale ktoś po drugiej stronie zna każde z waszych imion.",
+          "start": 14.278,
+          "end": 21.985
+        },
+        {
+          "speaker": "shadow",
+          "text": "Nie słuchajcie go.",
+          "start": 22.035,
+          "end": 24.121
+        },
+        {
+          "speaker": "chronicler",
+          "text": "Sygnał zanika. Potrzebuję waszej pomocy.",
+          "start": 24.171,
+          "end": 27.381
+        }
+      ],
+      "dialogueProvider": "ElevenLabs v3 Dialogue"
+    },
+    "taskBrief": {
+      "type": "video",
+      "src": "scenes/task-intro.mp4",
+      "poster": "scenes-src/task.png",
+      "dialogue": [
+        {
+          "speaker": "chronicler",
+          "direction": "clear and urgent, giving a mission",
+          "text": "W pomieszczeniu, w którym jesteście, znajdźcie przedmiot zdolny odebrać albo przekazać sygnał."
+        },
+        {
+          "speaker": "archivist",
+          "direction": "precise countdown operator",
+          "text": "Czas na stabilizację: trzydzieści sekund."
+        },
+        {
+          "speaker": "shadow",
+          "direction": "softly amused, threatening",
+          "text": "Możecie też niczego nie dotykać. Wtedy ja zdecyduję za was."
+        }
+      ],
+      "holdAfter": 350,
+      "next": "receiverTask",
+      "dialogueAudio": "audio/elevenlabs/taskBrief.mp3",
+      "captionTimeline": [
+        {
+          "speaker": "chronicler",
+          "text": "W pomieszczeniu, w którym jesteście, znajdźcie przedmiot zdolny odebrać albo przekazać sygnał.",
+          "start": 0.0,
+          "end": 5.933
+        },
+        {
+          "speaker": "archivist",
+          "text": "Czas na stabilizację: trzydzieści sekund.",
+          "start": 5.983,
+          "end": 8.645
+        },
+        {
+          "speaker": "shadow",
+          "text": "Możecie też niczego nie dotykać. Wtedy ja zdecyduję za was.",
+          "start": 8.695,
+          "end": 13.693
+        }
+      ],
+      "dialogueProvider": "ElevenLabs v3 Dialogue"
+    },
+    "receiverTask": {
+      "type": "task",
+      "src": "scenes/task-loop.mp4",
+      "poster": "scenes-src/task.png",
+      "timeLimit": 30,
+      "title": "PRÓBA ODBIORNIKA",
+      "prompt": "Znajdźcie w pokoju przedmiot, który może odebrać albo przekazać sygnał.",
+      "completeLabel": "MAMY PRZEDMIOT",
+      "onComplete": "messageChoice",
+      "onTimeout": "timeout"
+    },
+    "timeout": {
+      "type": "video",
+      "src": "scenes/timeout.mp4",
+      "poster": "scenes-src/timeout.png",
+      "dialogue": [
+        {
+          "speaker": "archivist",
+          "direction": "alarm rising, still controlled",
+          "text": "Stabilizacja nieudana. Sygnał został przejęty."
+        },
+        {
+          "speaker": "shadow",
+          "direction": "satisfied, close whisper",
+          "text": "Czas minął. Wiadomość należy teraz do mnie."
+        },
+        {
+          "speaker": "future",
+          "direction": "weak, distorted, frightened, with effort",
+          "text": "Jedno słowo... wróćcie."
+        },
+        {
+          "speaker": "chronicler",
+          "direction": "firm, fighting panic",
+          "text": "Macie jeszcze wybór. Ale nie cały."
+        }
+      ],
+      "holdAfter": 400,
+      "next": "messageChoice",
+      "dialogueAudio": "audio/elevenlabs/timeout.mp3",
+      "captionTimeline": [
+        {
+          "speaker": "archivist",
+          "text": "Stabilizacja nieudana. Sygnał został przejęty.",
+          "start": 0.0,
+          "end": 3.707
+        },
+        {
+          "speaker": "shadow",
+          "text": "Czas minął. Wiadomość należy teraz do mnie.",
+          "start": 3.757,
+          "end": 8.76
+        },
+        {
+          "speaker": "future",
+          "text": "Jedno słowo... wróćcie.",
+          "start": 8.81,
+          "end": 11.221
+        },
+        {
+          "speaker": "chronicler",
+          "text": "Macie jeszcze wybór. Ale nie cały.",
+          "start": 11.271,
+          "end": 15.626
+        }
+      ],
+      "dialogueProvider": "ElevenLabs v3 Dialogue"
+    },
+    "messageChoice": {
+      "type": "choice",
+      "src": "scenes/task-loop.mp4",
+      "poster": "scenes-src/task.png",
+      "timeLimit": 10,
+      "title": "CO ROBICIE Z WIADOMOŚCIĄ?",
+      "dialogue": [
+        {
+          "speaker": "chronicler",
+          "direction": "urgent, focused",
+          "text": "Znaleziony przedmiot przyjął sygnał. Teraz musicie zdecydować, co z nim zrobić."
+        },
+        {
+          "speaker": "archivist",
+          "direction": "precise and neutral",
+          "text": "Opcja pierwsza: odsłuchać. Opcja druga: zabezpieczyć."
+        },
+        {
+          "speaker": "shadow",
+          "direction": "tempting, persuasive, almost friendly",
+          "text": "Otwórzcie wiadomość. Przecież chcecie wiedzieć, kto ją wysłał."
+        }
+      ],
+      "options": [
+        {
+          "id": "listen",
+          "label": "ODSŁUCHAJ",
+          "next": "listen"
+        },
+        {
+          "id": "secure",
+          "label": "ZABEZPIECZ",
+          "next": "secure"
+        }
+      ],
+      "dialogueAudio": "audio/elevenlabs/messageChoice.mp3",
+      "captionTimeline": [
+        {
+          "speaker": "chronicler",
+          "text": "Znaleziony przedmiot przyjął sygnał. Teraz musicie zdecydować, co z nim zrobić.",
+          "start": 0.0,
+          "end": 6.521
+        },
+        {
+          "speaker": "archivist",
+          "text": "Opcja pierwsza: odsłuchać. Opcja druga: zabezpieczyć.",
+          "start": 6.571,
+          "end": 10.308
+        },
+        {
+          "speaker": "shadow",
+          "text": "Otwórzcie wiadomość. Przecież chcecie wiedzieć, kto ją wysłał.",
+          "start": 10.358,
+          "end": 15.208
+        }
+      ],
+      "dialogueProvider": "ElevenLabs v3 Dialogue"
+    },
+    "listen": {
+      "type": "video",
+      "src": "scenes/listen.mp4",
+      "poster": "scenes-src/listen.png",
+      "effect": {
+        "path": "listen"
+      },
+      "dialogue": [
+        {
+          "speaker": "archivist",
+          "direction": "surprised by the reading, speaking quickly",
+          "text": "Kanał otwarty. Źródło sygnału znajduje się wiele lat przed nami."
+        },
+        {
+          "speaker": "future",
+          "direction": "urgent, emotional, trying to break through interference",
+          "text": "Nie ufajcie Kronikarzowi. Ta wiadomość nie miała was ostrzec. Miała was sprowadzić."
+        },
+        {
+          "speaker": "shadow",
+          "direction": "a short, cold whisper",
+          "text": "Za późno."
+        },
+        {
+          "speaker": "chronicler",
+          "direction": "shouting for the first time, genuinely afraid",
+          "text": "Odłączcie odbiornik. Natychmiast!"
+        }
+      ],
+      "holdAfter": 500,
+      "next": "secondBriefListen",
+      "dialogueAudio": "audio/elevenlabs/listen.mp3",
+      "captionTimeline": [
+        {
+          "speaker": "archivist",
+          "text": "Kanał otwarty. Źródło sygnału znajduje się wiele lat przed nami.",
+          "start": 0.0,
+          "end": 5.78
+        },
+        {
+          "speaker": "future",
+          "text": "Nie ufajcie Kronikarzowi. Ta wiadomość nie miała was ostrzec. Miała was sprowadzić.",
+          "start": 5.83,
+          "end": 12.69
+        },
+        {
+          "speaker": "shadow",
+          "text": "Za późno.",
+          "start": 12.74,
+          "end": 14.202
+        },
+        {
+          "speaker": "chronicler",
+          "text": "Odłączcie odbiornik. Natychmiast!",
+          "start": 14.252,
+          "end": 16.253
+        }
+      ],
+      "dialogueProvider": "ElevenLabs v3 Dialogue"
+    },
+    "secure": {
+      "type": "video",
+      "src": "scenes/secure.mp4",
+      "poster": "scenes-src/secure.png",
+      "effect": {
+        "path": "secure"
+      },
+      "dialogue": [
+        {
+          "speaker": "archivist",
+          "direction": "relieved but cautious",
+          "text": "Zabezpieczenie przyjęte. Kanał został zamknięty."
+        },
+        {
+          "speaker": "chronicler",
+          "direction": "quiet relief",
+          "text": "Dobrze. Portal jest bezpieczny."
+        },
+        {
+          "speaker": "shadow",
+          "direction": "dry, mocking, very close",
+          "text": "Naprawdę?"
+        },
+        {
+          "speaker": "future",
+          "direction": "desperate, speaking through a failing connection",
+          "text": "Słyszycie mnie? Nie zamknęliście portalu. Zamknęliście mnie po niewłaściwej stronie."
+        },
+        {
+          "speaker": "chronicler",
+          "direction": "stunned, barely above a whisper",
+          "text": "Skąd ten głos zna wasze imiona?"
+        }
+      ],
+      "holdAfter": 500,
+      "next": "secondBriefSecure",
+      "dialogueAudio": "audio/elevenlabs/secure.mp3",
+      "captionTimeline": [
+        {
+          "speaker": "archivist",
+          "text": "Zabezpieczenie przyjęte. Kanał został zamknięty.",
+          "start": 0.0,
+          "end": 3.304
+        },
+        {
+          "speaker": "chronicler",
+          "text": "Dobrze. Portal jest bezpieczny.",
+          "start": 3.354,
+          "end": 6.08
+        },
+        {
+          "speaker": "shadow",
+          "text": "Naprawdę?",
+          "start": 6.13,
+          "end": 7.121
+        },
+        {
+          "speaker": "future",
+          "text": "Słyszycie mnie? Nie zamknęliście portalu. Zamknęliście mnie po niewłaściwej stronie.",
+          "start": 7.171,
+          "end": 13.366
+        },
+        {
+          "speaker": "chronicler",
+          "text": "Skąd ten głos zna wasze imiona?",
+          "start": 13.416,
+          "end": 17.298
+        }
+      ],
+      "dialogueProvider": "ElevenLabs v3 Dialogue"
+    },
+    "cliffhangerListen": {
+      "type": "video",
+      "src": "scenes/cliffhanger.mp4",
+      "poster": "scenes-src/cliffhanger.png",
+      "dialogue": [
+        {
+          "speaker": "narrator",
+          "direction": "cinematic, grave, measured",
+          "text": "Na ekranie odbiornika pojawiła się data: jutro, godzina dwadzieścia trzy pięćdziesiąt dziewięć."
+        },
+        {
+          "speaker": "future",
+          "direction": "urgent but clearer now",
+          "text": "Macie jeden dzień, żeby nie dopuścić do pierwszego pęknięcia."
+        },
+        {
+          "speaker": "shadow",
+          "direction": "whispering with quiet certainty",
+          "text": "Ja będę tam wcześniej."
+        }
+      ],
+      "holdAfter": 650,
+      "next": "end",
+      "dialogueAudio": "audio/elevenlabs/cliffhangerListen.mp3",
+      "captionTimeline": [
+        {
+          "speaker": "narrator",
+          "text": "Na ekranie odbiornika pojawiła się data: jutro, godzina dwadzieścia trzy pięćdziesiąt dziewięć.",
+          "start": 0.0,
+          "end": 6.517
+        },
+        {
+          "speaker": "future",
+          "text": "Macie jeden dzień, żeby nie dopuścić do pierwszego pęknięcia.",
+          "start": 6.567,
+          "end": 11.544
+        },
+        {
+          "speaker": "shadow",
+          "text": "Ja będę tam wcześniej.",
+          "start": 11.594,
+          "end": 14.007
+        }
+      ],
+      "dialogueProvider": "ElevenLabs v3 Dialogue"
+    },
+    "cliffhangerSecure": {
+      "type": "video",
+      "src": "scenes/cliffhanger.mp4",
+      "poster": "scenes-src/cliffhanger.png",
+      "dialogue": [
+        {
+          "speaker": "narrator",
+          "direction": "cinematic, ominous, slow",
+          "text": "Portal zgasł. Po sekundzie na jego powierzchni pojawiło się pierwsze pęknięcie."
+        },
+        {
+          "speaker": "future",
+          "direction": "urgent warning, breathless",
+          "text": "Nie otwierajcie go ponownie. Najpierw odnajdźcie drugą Kotwicę."
+        },
+        {
+          "speaker": "shadow",
+          "direction": "soft, triumphant whisper",
+          "text": "Ja już ją znalazłem."
+        }
+      ],
+      "holdAfter": 650,
+      "next": "end",
+      "dialogueAudio": "audio/elevenlabs/cliffhangerSecure.mp3",
+      "captionTimeline": [
+        {
+          "speaker": "narrator",
+          "text": "Portal zgasł. Po sekundzie na jego powierzchni pojawiło się pierwsze pęknięcie.",
+          "start": 0.0,
+          "end": 5.813
+        },
+        {
+          "speaker": "future",
+          "text": "Nie otwierajcie go ponownie. Najpierw odnajdźcie drugą Kotwicę.",
+          "start": 5.863,
+          "end": 10.185
+        },
+        {
+          "speaker": "shadow",
+          "text": "Ja już ją znalazłem.",
+          "start": 10.235,
+          "end": 12.57
+        }
+      ],
+      "dialogueProvider": "ElevenLabs v3 Dialogue"
+    },
+    "end": {
+      "type": "end"
+    },
+    "secondBriefListen": {
+      "type": "video",
+      "src": "scenes/listen.mp4",
+      "poster": "scenes-src/listen.png",
+      "dialogue": [
+        {
+          "speaker": "future",
+          "direction": "urgent, clear despite interference",
+          "text": "Otworzyliście kanał. Sygnał przyczepił się do znalezionego przedmiotu."
+        },
+        {
+          "speaker": "chronicler",
+          "direction": "controlled urgency, giving physical instructions",
+          "text": "Nie odkładajcie go. Jedna osoba trzyma odbiornik. Pozostali muszą znaleźć źródło światła."
+        },
+        {
+          "speaker": "archivist",
+          "direction": "precise, ominous",
+          "text": "Światło pokaże, czy wiadomość wysłał człowiek, czy Cień."
+        }
+      ],
+      "holdAfter": 350,
+      "next": "lightTask",
+      "dialogueAudio": "audio/elevenlabs/secondBriefListen.mp3",
+      "captionTimeline": [
+        {
+          "speaker": "future",
+          "text": "Otworzyliście kanał. Sygnał przyczepił się do znalezionego przedmiotu.",
+          "start": 0.0,
+          "end": 4.14
+        },
+        {
+          "speaker": "chronicler",
+          "text": "Nie odkładajcie go. Jedna osoba trzyma odbiornik. Pozostali muszą znaleźć źródło światła.",
+          "start": 4.19,
+          "end": 10.235
+        },
+        {
+          "speaker": "archivist",
+          "text": "Światło pokaże, czy wiadomość wysłał człowiek, czy Cień.",
+          "start": 10.285,
+          "end": 14.425
+        }
+      ],
+      "dialogueProvider": "ElevenLabs v3 Dialogue"
+    },
+    "secondBriefSecure": {
+      "type": "video",
+      "src": "scenes/secure.mp4",
+      "poster": "scenes-src/secure.png",
+      "dialogue": [
+        {
+          "speaker": "archivist",
+          "direction": "concerned, professional",
+          "text": "Zamknięcie nie zatrzymało echa. Coś zostało w znalezionym przedmiocie."
+        },
+        {
+          "speaker": "shadow",
+          "direction": "very close, pleased whisper",
+          "text": "Odrobina mnie."
+        },
+        {
+          "speaker": "chronicler",
+          "direction": "firm, urgent",
+          "text": "Jedna osoba trzyma odbiornik. Pozostali znajdą światło i skierują je na przedmiot."
+        },
+        {
+          "speaker": "archivist",
+          "direction": "quiet warning",
+          "text": "Jeśli cień nie zniknie, portal nie został naprawdę zamknięty."
+        }
+      ],
+      "holdAfter": 350,
+      "next": "lightTask",
+      "dialogueAudio": "audio/elevenlabs/secondBriefSecure.mp3",
+      "captionTimeline": [
+        {
+          "speaker": "archivist",
+          "text": "Zamknięcie nie zatrzymało echa. Coś zostało w znalezionym przedmiocie.",
+          "start": 0.0,
+          "end": 4.714
+        },
+        {
+          "speaker": "shadow",
+          "text": "Odrobina mnie.",
+          "start": 4.764,
+          "end": 6.076
+        },
+        {
+          "speaker": "chronicler",
+          "text": "Jedna osoba trzyma odbiornik. Pozostali znajdą światło i skierują je na przedmiot.",
+          "start": 6.126,
+          "end": 12.299
+        },
+        {
+          "speaker": "archivist",
+          "text": "Jeśli cień nie zniknie, portal nie został naprawdę zamknięty.",
+          "start": 12.349,
+          "end": 17.063
+        }
+      ],
+      "dialogueProvider": "ElevenLabs v3 Dialogue"
+    },
+    "lightTask": {
+      "type": "task",
+      "src": "scenes/task-loop.mp4",
+      "poster": "scenes-src/task.png",
+      "timeLimit": 40,
+      "title": "PRÓBA ŚWIATŁA",
+      "heading": "Ujawnijcie źródło sygnału",
+      "prompt": "Jedna osoba trzyma znaleziony przedmiot. Pozostali mają znaleźć źródło światła i skierować je na przedmiot.",
+      "completeLabel": "PRZEDMIOT JEST OŚWIETLONY",
+      "hint": "Sukces lub spóźnienie zmieni skutek ostatniej decyzji.",
+      "captureItem": false,
+      "onComplete": "finalChoice",
+      "onTimeout": "finalChoice"
+    },
+    "finalChoice": {
+      "type": "choice",
+      "src": "scenes/cliffhanger.mp4",
+      "poster": "scenes-src/cliffhanger.png",
+      "timeLimit": 12,
+      "title": "CO ZROBICIE Z SYGNAŁEM?",
+      "dialogue": [
+        {
+          "speaker": "archivist",
+          "direction": "tense, precise",
+          "text": "Sygnał odsłonił dwa możliwe wyjścia. Tylko jedno z nich zamknie tę noc."
+        },
+        {
+          "speaker": "future",
+          "direction": "emotional, urgent",
+          "text": "Wyślijcie ostrzeżenie do jutra. To może uratować jedną osobę."
+        },
+        {
+          "speaker": "shadow",
+          "direction": "seductive whisper",
+          "text": "Albo zamknijcie pętlę i zapomnijcie, że kiedykolwiek mnie usłyszeliście."
+        }
+      ],
+      "options": [
+        {
+          "id": "send",
+          "label": "WYŚLIJ OSTRZEŻENIE",
+          "caption": "Wiadomość dotrze do przyszłości, ale pętla pozostanie otwarta",
+          "next": "sendEnding",
+          "nextOnFailure": "shadowEnding"
+        },
+        {
+          "id": "close",
+          "label": "ZAMKNIJ PĘTLĘ",
+          "caption": "Połączenie zgaśnie, ale możecie odciąć osobę po drugiej stronie",
+          "next": "closeEnding",
+          "nextOnFailure": "closeDamagedEnding"
+        }
+      ],
+      "dialogueAudio": "audio/elevenlabs/finalChoice.mp3",
+      "captionTimeline": [
+        {
+          "speaker": "archivist",
+          "text": "Sygnał odsłonił dwa możliwe wyjścia. Tylko jedno z nich zamknie tę noc.",
+          "start": 0.0,
+          "end": 6.484
+        },
+        {
+          "speaker": "future",
+          "text": "Wyślijcie ostrzeżenie do jutra. To może uratować jedną osobę.",
+          "start": 6.534,
+          "end": 11.486
+        },
+        {
+          "speaker": "shadow",
+          "text": "Albo zamknijcie pętlę i zapomnijcie, że kiedykolwiek mnie usłyszeliście.",
+          "start": 11.536,
+          "end": 16.488
+        }
+      ],
+      "dialogueProvider": "ElevenLabs v3 Dialogue"
+    },
+    "sendEnding": {
+      "type": "video",
+      "src": "scenes/cliffhanger.mp4",
+      "poster": "scenes-src/cliffhanger.png",
+      "effect": {
+        "path": "send"
+      },
+      "dialogue": [
+        {
+          "speaker": "archivist",
+          "direction": "surprised, reading a confirmed transmission",
+          "text": "Ostrzeżenie wysłane. Odbiór potwierdzony: jutro, godzina dwadzieścia trzy pięćdziesiąt dziewięć."
+        },
+        {
+          "speaker": "future",
+          "direction": "relieved for a moment, then frightened",
+          "text": "Dotarło. Ale na liście waszej drużyny brakuje jednego imienia."
+        },
+        {
+          "speaker": "shadow",
+          "direction": "quiet certainty",
+          "text": "Teraz już wiecie, po kogo przyszedłem."
+        }
+      ],
+      "holdAfter": 700,
+      "next": "end",
+      "dialogueAudio": "audio/elevenlabs/sendEnding.mp3",
+      "captionTimeline": [
+        {
+          "speaker": "archivist",
+          "text": "Ostrzeżenie wysłane. Odbiór potwierdzony: jutro, godzina dwadzieścia trzy pięćdziesiąt dziewięć.",
+          "start": 0.0,
+          "end": 5.717
+        },
+        {
+          "speaker": "future",
+          "text": "Dotarło. Ale na liście waszej drużyny brakuje jednego imienia.",
+          "start": 5.767,
+          "end": 10.95
+        },
+        {
+          "speaker": "shadow",
+          "text": "Teraz już wiecie, po kogo przyszedłem.",
+          "start": 11.0,
+          "end": 14.581
+        }
+      ],
+      "dialogueProvider": "ElevenLabs v3 Dialogue"
+    },
+    "closeEnding": {
+      "type": "video",
+      "src": "scenes/secure.mp4",
+      "poster": "scenes-src/secure.png",
+      "effect": {
+        "path": "close"
+      },
+      "dialogue": [
+        {
+          "speaker": "archivist",
+          "direction": "relieved, then suddenly alarmed",
+          "text": "Pętla zamknięta. Sygnał zniknął."
+        },
+        {
+          "speaker": "chronicler",
+          "direction": "low, unsettled",
+          "text": "Nie. Nie zniknął. Przeniósł się."
+        },
+        {
+          "speaker": "shadow",
+          "direction": "whispering from inside the room",
+          "text": "Sprawdźcie znaleziony przedmiot."
+        }
+      ],
+      "holdAfter": 700,
+      "next": "end",
+      "dialogueAudio": "audio/elevenlabs/closeEnding.mp3",
+      "captionTimeline": [
+        {
+          "speaker": "archivist",
+          "text": "Pętla zamknięta. Sygnał zniknął.",
+          "start": 0.0,
+          "end": 3.042
+        },
+        {
+          "speaker": "chronicler",
+          "text": "Nie. Nie zniknął. Przeniósł się.",
+          "start": 3.092,
+          "end": 6.778
+        },
+        {
+          "speaker": "shadow",
+          "text": "Sprawdźcie znaleziony przedmiot.",
+          "start": 6.828,
+          "end": 9.226
+        }
+      ],
+      "dialogueProvider": "ElevenLabs v3 Dialogue"
+    },
+    "shadowEnding": {
+      "type": "video",
+      "src": "scenes/timeout.mp4",
+      "poster": "scenes-src/timeout.png",
+      "effect": {
+        "path": "shadow"
+      },
+      "dialogue": [
+        {
+          "speaker": "archivist",
+          "direction": "alarm, loss of control",
+          "text": "Światło pojawiło się za późno. Ostrzeżenie zostało przechwycone."
+        },
+        {
+          "speaker": "shadow",
+          "direction": "triumphant whisper",
+          "text": "Dziękuję. Teraz przyszłość zna wasze imiona."
+        },
+        {
+          "speaker": "future",
+          "direction": "fading, desperate",
+          "text": "Nie pozwólcie mu wybrać pierwszej osoby."
+        }
+      ],
+      "holdAfter": 700,
+      "next": "end",
+      "dialogueAudio": "audio/elevenlabs/shadowEnding.mp3",
+      "captionTimeline": [
+        {
+          "speaker": "archivist",
+          "text": "Światło pojawiło się za późno. Ostrzeżenie zostało przechwycone.",
+          "start": 0.0,
+          "end": 4.785
+        },
+        {
+          "speaker": "shadow",
+          "text": "Dziękuję. Teraz przyszłość zna wasze imiona.",
+          "start": 4.835,
+          "end": 8.521
+        },
+        {
+          "speaker": "future",
+          "text": "Nie pozwólcie mu wybrać pierwszej osoby.",
+          "start": 8.571,
+          "end": 12.256
+        }
+      ],
+      "dialogueProvider": "ElevenLabs v3 Dialogue"
+    },
+    "closeDamagedEnding": {
+      "type": "video",
+      "src": "scenes/timeout.mp4",
+      "poster": "scenes-src/timeout.png",
+      "effect": {
+        "path": "closeDamaged"
+      },
+      "dialogue": [
+        {
+          "speaker": "archivist",
+          "direction": "uncertain, reporting a partial success",
+          "text": "Pętla zamknięta, ale cień pozostał wewnątrz odbiornika."
+        },
+        {
+          "speaker": "chronicler",
+          "direction": "grave warning",
+          "text": "Nie zostawiajcie znalezionego przedmiotu samego tej nocy."
+        },
+        {
+          "speaker": "shadow",
+          "direction": "almost playful whisper",
+          "text": "Za późno. Już wybrałem, kto pierwszy go dotknie."
+        }
+      ],
+      "holdAfter": 700,
+      "next": "end"
+    }
+  },
+  "voicePack": {
+    "provider": "ElevenLabs",
+    "model": "eleven_v3",
+    "mode": "text-to-dialogue",
+    "ready": false,
+    "language": "pl",
+    "outputFormat": "mp3_44100_128",
+    "generatedAt": "2026-07-18T16:16:50.121555+00:00",
+    "cast": {
+      "narrator": "Lily - Velvety Actress",
+      "chronicler": "Liam - Energetic, Social Media Creator",
+      "archivist": "Alice - Clear, Engaging Educator",
+      "shadow": "Callum - Husky Trickster",
+      "future": "Sarah - Mature, Reassuring, Confident"
+    },
+    "voiceIds": {
+      "narrator": "pFZP5JQG7iQjIQuC4Bku",
+      "chronicler": "TX3LPaxmHKxFdv7VOQHJ",
+      "archivist": "Xb7hH8MSUJpSbSDYk0k2",
+      "shadow": "N2lVS1w4EtoT3dr4eOWO",
+      "future": "EXAVITQu4vr4xnSDxMaL"
+    },
+    "partialReady": true,
+    "generatedCount": 14,
+    "totalCount": 15
+  },
+  "pilotVersion": "0.5.4-force",
+  "pilotScope": {
+    "tasks": 2,
+    "choices": 2,
+    "endings": 4,
+    "targetMinutes": "4-6"
+  }
+}
