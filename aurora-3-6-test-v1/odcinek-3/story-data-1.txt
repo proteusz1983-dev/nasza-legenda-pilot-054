@@ -1,0 +1,56 @@
+window.AURORA_EP = {
+  "meta": {
+    "num": 3,
+    "title": "OSIEMNAŚCIE MINUT",
+    "progressSteps": 44
+  },
+  "startScene": "s301",
+  "defaultEnding": "request",
+  "defaults": {
+    "ep2_route": "break",
+    "ep3_approach": "secure",
+    "archive_self": false,
+    "saw_red_woman": true,
+    "knows_18": true,
+    "decision1": null,
+    "decision2": null,
+    "decision3": null,
+    "decision4": null,
+    "decision5": null,
+    "decision6": null,
+    "decision7": null,
+    "decision8": null,
+    "found_red_fabric": false,
+    "knows_lena": false,
+    "knows_requested_forget": false
+  },
+  "startOptions": [
+    {"value": "follow","label": "Jutro już tu było — podążyłam za nagraniem"},
+    {"value": "break","label": "Nie to miejsce — złamałam nagranie"},
+    {"value": "woman","label": "Kobieta pamięta — poszłam za kobietą w czerwieni"}
+  ],
+  "flags": [
+    {"key": "archive_self","label": "Sama przeglądałam CAM04 i wiem, że Leon pomijał część archiwum"},
+    {"key": "saw_red_woman","label": "Śledzę trop kobiety w czerwieni"},
+    {"key": "knows_18","label": "Wiem, że brakujący przedział trwa 18 minut"},
+    {"key": "found_red_fabric","label": "W Odcinku 1 znalazłam na schodach mokry ślad obcasa i skrawek ciemnoczerwonej tkaniny"}
+  ],
+  "presets": {
+    "follow": {"ep2_route": "follow","ep3_approach": "secure"},
+    "break": {"ep2_route": "break","ep3_approach": "metadata"},
+    "woman": {"ep2_route": "woman","ep3_approach": "leon","saw_red_woman": true}
+  },
+  "prologs": {
+    "follow": {"time": "01:16 — monitoring","text": "Na ekranie urządzenia wciąż widnieje zakres **00:29 — 00:47**.\n\nJeszcze godzinę temu byłaś po drugiej stronie ściany, choć nie pamiętasz chwili, w której przez nią przeszłaś. Teraz przejście znów jest tylko linią na starym planie.\n\nPlik czeka.\n\nLeon również.\n\n— Nie otwieraj go w ciemno — mówi.\n\nTym razem nie brzmi to jak zakaz. Bardziej jak prośba kogoś, kto już widział, co robi z Tobą brak odpowiedzi.\n\nPrzesuwasz urządzenie na środek biurka.\n\n— Najpierw zabezpieczamy dowód. Potem patrzymy, co jest w środku.","next": "s301"},
+    "break": {"time": "01:16 — monitoring","text": "Telefon leży obok klawiatury. Na jego nagraniu nadal istnieje ta sama dziura: 00:28:59, a potem 00:47.\n\nNie byłaś na trzecim piętrze. Nie poszłaś za przyszłym nagraniem. Zmieniłaś miejsce, a mimo to straciłaś dokładnie te same osiemnaście minut.\n\nNa urządzeniu AURORA pojawił się nowy plik.\n\n**00:29 — 00:47**\n\nNie naciskasz ODTWORZYĆ. Otwierasz informacje.\n\nŹródło: CAM04. Długość: 18:00. Data utworzenia — brak.\n\n— Zacznijmy od tego, co da się sprawdzić — mówisz.\n\nLeon siada obok.\n\n— W Aurorze to zwykle najkrótsza lista.","next": "s301"},
+    "woman": {"time": "01:16 — monitoring","text": "Ślad „18” zniknął z lustra, ale nadal widzisz go, kiedy zamykasz oczy.\n\nKobieta w czerwieni wskazała 00:29, zanim zniknęło Ci osiemnaście minut. Po wszystkim zostawiła tylko dwie cyfry.\n\nNa urządzeniu AURORA pojawia się nowy plik.\n\n**00:29 — 00:47**\n\nLeon patrzy na niego, potem na Ciebie.\n\n— Powiedziałem „znowu” — mówi, zanim zdążysz zapytać. — Wiem.\n\n— Więc zacznij mówić.\n\n— Powiem. Ale nie chcę, żeby moja pamięć zastąpiła Twoją.\n\nKładziesz urządzenie między wami.\n\n— W takim razie sprawdzimy obie.","next": "s301"}
+  },
+  "scenes": {
+    "s301": {"time": "01:20 — monitoring","text": "Podłączasz urządzenie do komputera.\n\nTym razem folder nie jest pusty. Jeden plik, osiemnaście minut. Nie da się go skopiować zwykłym przeciągnięciem. Każda próba kończy się komunikatem: **BRAK DOSTĘPU DO ŹRÓDŁA**.\n\nMożesz jednak otworzyć podgląd bez uruchamiania całego materiału.\n\nPierwsza klatka jest czarna.\n\nDruga też.\n\nPrzy trzeciej pojawia się szary pas obrazu i fragment hotelowego korytarza. Nie wiadomo jeszcze, czy to nagranie, czy coś, co tylko udaje nagranie.\n\nLeon odsuwa krzesło o kilka centymetrów.\n\n— Jeśli zacznie Ci wracać pamięć, nie próbuj łapać wszystkiego naraz.\n\n— Skąd wiesz, co zacznie mi wracać?\n\nNie odpowiada od razu.\n\nTo wystarcza, żeby pierwsza decyzja nie dotyczyła pliku.\n\nDotyczy jego."},
+    "s302a": {"time": "01:23 — monitoring","text": "— Zostań — mówisz. — Ale niczego mi nie podpowiadaj.\n\nLeon przytakuje.\n\nOtwierasz plik bez dźwięku.\n\n00:29:03.\n\nObraz skacze. Przez sekundę widzisz swój profil, potem ścianę, potem czerwony materiał przesuwający się tuż przy obiektywie.\n\n00:29:17.\n\nTwoja dłoń leży na czymś metalowym.\n\n00:29:19.\n\nCzerń.\n\nCiało reaguje wcześniej niż pamięć. Zaciskasz palce na krawędzi biurka.\n\nLeon nic nie mówi.\n\nDobrze. Dokładnie o to prosiłaś.","next": "s302x"},
+    "s302b": {"time": "01:23 — monitoring","text": "— Daj mi pięć minut.\n\nLeon wstaje.\n\n— Jeśli cokolwiek poczujesz...\n\n— Pięć minut.\n\nZamyka za sobą drzwi.\n\nOtwierasz plik bez dźwięku.\n\n00:29:03.\n\nObraz skacze. Przez sekundę widzisz swój profil, potem ścianę, potem czerwony materiał przesuwający się tuż przy obiektywie.\n\n00:29:17.\n\nTwoja dłoń leży na czymś metalowym.\n\n00:29:19.\n\nCzerń.\n\nOddech przyspiesza. Nie dlatego, że obraz jest straszny.\n\nDlatego, że przez ułamek sekundy wiesz, jaki zapach panował w tamtym korytarzu.\n\nDym.\n\nPamięć znika, zanim zdążysz ją zatrzymać.","next": "s302x"},
+    "s303": {"time": "01:27 — monitoring","text": "Plik ma trzy warstwy.\n\nObraz z CAM04. Ścieżkę dźwiękową, która zaczyna się dopiero po kilkunastu sekundach. I serię znaczników, których zwykły hotelowy monitoring nie używa.\n\n**PAMIĘĆ / OBRAZ / GŁOS**\n\nPrzy każdym widnieją inne przerwy.\n\nNie da się otworzyć wszystkiego jednocześnie bez uruchomienia pliku od początku do końca.\n\nMożesz za to wybrać, od której warstwy zaczniesz."},
+    "s304a": {"time": "01:31 — monitoring","text": "Wyłączasz obraz.\n\nPierwsze sekundy to szum.\n\nPotem Twój oddech.\n\nI drugi głos kobiety.\n\n— Nie tutaj.\n\nZamierasz.\n\nTo nie kobieta w czerwieni. Głos jest młodszy, szybszy, zdenerwowany.\n\n— {{name}}, słyszysz mnie?\n\nNagranie urywa się dokładnie po Twoim imieniu.\n\nNa pasku dźwięku zostaje krótka etykieta:\n\n**LENA / kanał 2**","next": "s304x"},
+    "s304b": {"time": "01:31 — monitoring","text": "Przewijasz klatka po klatce.\n\n00:29:11 — korytarz.\n\n00:29:12 — Ty.\n\n00:29:13 — na końcu kadru druga kobieca sylwetka. Nie czerwona. Jasna koszula, ciemne spodnie. Twarz zasłania odblask lampy.\n\n00:29:14 — sylwetki już nie ma.\n\nW danych klatki znajduje się podpis, którego wcześniej nie widziałaś:\n\n**LENA / kanał 2**\n\nNie znasz tego imienia.\n\nA przynajmniej tak powinno być.\n\nMimo to boli Cię, zanim jeszcze cokolwiek sobie przypomnisz.","next": "s304x"},
+    "s304c": {"time": "01:31 — monitoring","text": "Klikasz znacznik PAMIĘĆ.\n\nEkran nie pokazuje filmu. Pojawia się lista krótkich haseł:\n\n**drzwi**\n\n**dym**\n\n**Leon**\n\n**Lena**\n\n**nie wybieraj**\n\nPrzy ostatnim wpisie urządzenie zawiesza się na kilka sekund.\n\nNie znasz imienia Lena.\n\nA jednak kiedy je czytasz, masz wrażenie, że ktoś właśnie wypowiedział je tuż za Twoim uchem.","next": "s304x"},
+    "s305": {"time": "01:38 — monitoring","text": "Drzwi otwierają się.\n\n{{IF:leon_present}}Leon nawet nie zdążył wstać. Po prostu patrzy na ekran i widzisz, że zna to imię.{{ELSE}}Leon wraca dokładnie wtedy, kiedy na ekranie nadal widnieje słowo **LENA**. Zatrzymuje się w progu.{{ENDIF}}\n\n— Kim jest Lena?\n\nPytanie wypowiadasz spokojnie.\n\nZbyt spokojnie.\n\nLeon opiera dłonie o oparcie krzesła."
