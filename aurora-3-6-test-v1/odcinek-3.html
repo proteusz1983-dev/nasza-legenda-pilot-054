@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Północ w Hotelu Aurora — Odcinek 3</title><link rel="stylesheet" href="styles.css"></head>
+<body><div id="bg" class="bg corridor"></div><div class="grain"></div>
+<header class="topbar"><div class="brand"><span class="brand-small">PÓŁNOC W HOTELU</span><strong>AURORA</strong></div>
+<div class="episode"><span>ODCINEK 3</span><b>OSIEMNAŚCIE MINUT</b></div><div class="tools"><button id="audioBtn" class="icon-btn" title="Narracja testowa">◉</button><button id="restartBtn" class="icon-btn" title="Restart">↻</button></div></header>
+<main>
+<section id="startScreen" class="start-wrap"><div class="start-card"><div class="eyebrow">WERSJA TESTOWA V1</div><h1>Północ w Hotelu Aurora</h1><h2>Odcinek 3: OSIEMNAŚCIE MINUT</h2>
+<p class="intro">Pełny draft fabularny do przechodzenia. Rytm docelowy: książka z decyzją mniej więcej co 4–6 minut. Wersja testowa ma „Wstecz”; w wersji produkcyjnej decyzje nie będą cofane.</p>
+<label>Imię bohaterki<input id="nameInput" value="Julia" maxlength="30" autocomplete="off"></label>
+<label>Jak zakończył się Odcinek 2?<select id="endingSelect"></select></label>
+<details class="test-details"><summary>Stan z poprzednich odcinków — ustawienia testowe</summary><div id="flagBox"></div></details>
+<button id="startBtn" class="primary">Rozpocznij odcinek</button><button id="resumeBtn" class="secondary hidden">Kontynuuj zapisany test</button><div class="hint">Jeśli przechodzisz odcinki po kolei w tej samej przeglądarce, część stanu zostanie przeniesiona automatycznie.</div></div></section>
+<section id="storyScreen" class="story-wrap hidden"><div class="progress"><span id="progressBar"></span></div><article class="story-card"><div class="meta"><span id="timeLabel"></span><span id="sceneLabel"></span></div><div id="storyText" class="story-text"></div><div id="choices" class="choices"></div><div id="nav" class="nav-row"><button id="backBtn" class="secondary">← Wstecz</button><button id="nextBtn" class="primary">Dalej →</button></div></article></section>
+<section id="endScreen" class="end-wrap hidden"><div class="end-card"><div class="eyebrow">ODCINEK 3 UKOŃCZONY</div><h1 id="endingTitle"></h1><div id="endingText" class="story-text"></div>
+<section class="final-share"><p class="final-memory">Historia zapamiętała Twoje decyzje.</p><h2>Twoje zakończenie</h2><div class="final-route-line"><span>Ścieżka</span><strong id="routeSummary"></strong></div><p id="routeTeaser" class="share-teaser"></p><div class="share-actions"><button id="shareCardBtn" class="primary">Udostępnij kartę</button><button id="downloadStoryBtn" class="secondary">Pobierz relację 9:16</button><button id="downloadPostBtn" class="secondary">Pobierz post 1:1</button></div><p id="shareStatus" class="share-status" aria-live="polite"></p></section>
+<button id="whatNextBtn" class="primary what-next">Co dalej? →</button><div id="aftercarePanel" class="aftercare hidden"><div class="next-episode"><span>DALEJ</span><strong>ODCINEK 4 — CENA ZAPOMNIENIA</strong></div><p class="aftercare-copy">Leon prowadzi Cię pod hotel, do miejsca, w którym kilka razy próbowałaś oddać osiemnaście minut pamięci.</p><div class="end-actions"><button id="reportBtn" class="secondary">Pobierz raport testu</button><button id="againBtn" class="primary">Przejdź inną ścieżkę</button></div></div></div></section>
+</main><script>
+(async()=>{
+  const parts=['ep3_0.txt','ep3_1.txt','ep3_2.txt'];
+  const b64=(await Promise.all(parts.map(p=>fetch(p).then(r=>{if(!r.ok) throw new Error(p+' '+r.status); return r.text();})))).join('');
+  const bin=atob(b64.replace(/\s/g,''));
+  const bytes=Uint8Array.from(bin,c=>c.charCodeAt(0));
+  if(!('DecompressionStream' in window)){document.body.innerHTML='<div style="padding:40px;color:white;background:#07090d;font-family:Arial">Ta przeglądarka jest za stara. Otwórz test w aktualnym Chrome lub Safari.</div>';return;}
+  const ds=new DecompressionStream('gzip');
+  const txt=await new Response(new Blob([bytes]).stream().pipeThrough(ds)).text();
+  (0,eval)(txt);
+  const s=document.createElement('script');s.src='app.js';document.body.appendChild(s);
+})().catch(err=>{console.error(err);document.body.innerHTML='<div style="padding:40px;color:white;background:#07090d;font-family:Arial">Nie udało się wczytać odcinka. Odśwież stronę.</div>';});
+</script></body></html>
